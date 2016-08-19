@@ -1,0 +1,22 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: adufour
+  instance_type: m3.medium
+  image_id: ami-b7b4fedd
+
+provisioner:
+  name: chef_zero
+
+transport:
+  ssh_key: /Users/andrewdufour/.ssh/id_rsa
+
+platforms:
+  - name: SLES12SP1
+
+suites:
+  - name: default
+    data_bags_path: "test/integration/data_bags"
+    run_list:
+      - recipe[sles-chef::chef-server]
+    attributes:

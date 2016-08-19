@@ -1,0 +1,12 @@
+name 'sles-chef'
+maintainer 'Andrew DuFour'
+maintainer_email 'adufour@chef.io'
+license 'Apache V2'
+description 'Stands up chef on SuSE'
+version '0.1.0'
+
+depends 'hostsfile'
+depends 'chef-provisioning-vagrant-helper'
+depends 'chef-provisioning-aws-helper'
+depends 'chef-ingredient'
+depends 'chef-server-ctl'
